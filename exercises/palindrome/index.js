@@ -7,6 +7,27 @@
 //   palindrome("abba") === true
 //   palindrome("abcdefg") === false
 
-function palindrome(str) {}
+function palindrome(str) {
+    
+    //this guy suggests reversing the string and then comparing it
+    //is the best solution
+    //str.split('').reverse().join('') == str;
+
+    // my solution (better on time or whatever but less readable)
+    // let j = str.length - 1;
+    // for (let i = 0; i < str.length; i++) {
+    //     if (str[i] != str[j]) {
+    //         return false;
+    //     }
+    //     j--;
+    // }
+    // return true
+
+    // less ideal solution?
+    return str.split('').every((char, i) => {
+        return char === str[str.length - i - 1];
+    });
+
+}
 
 module.exports = palindrome;
