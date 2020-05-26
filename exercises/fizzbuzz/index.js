@@ -12,6 +12,18 @@
 //   4
 //   buzz
 
-function fizzBuzz(n) {}
+function fizzBuzz(n) {
+    //my solution
+    for (let i = 1; i <= n; i++ ){
+        let text = ''
+        if (i % 3 == 0) { text += 'fizz'}
+        if (i % 5 == 0) { text += 'buzz'}
+        text.length == 0 ? console.log(i) : console.log(text)
+    }
+
+    //steve's solution
+    //steve says do it simple w/ the three if statements
+
+}
 
 module.exports = fizzBuzz;
